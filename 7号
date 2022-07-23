@@ -1,0 +1,72 @@
+#include<stdio.h>                                //www.cplusplus.com
+#include<string.h>                                //英文http://en.cppreference.com     中文则en改为zh
+#include<stdlib.h>
+#include<time.h>
+
+//void swap1(int x,int y)
+//{
+//	int tmp = 0;
+//	tmp = x;//error
+//	x = y;
+//	y = x;
+//}
+void swap2(int* pa,int* pb)
+{
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;//ture
+	*pb = tmp;
+}
+int main()
+{
+	int a = 10;
+	int b = 20;
+	//swap1(a, b);
+	swap2(&a,&b);
+	printf("a=%d\nb=%d\n",a ,b);
+	return 0;
+}
+//int get_max(int x,int y)
+//{
+//	if(x>y)
+//		return x;
+//	else
+//		return y;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int max = get_max(a, b);
+//	printf("%d\n", max);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr[] = "hello world";
+//	memset(arr,'*',5);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr1[] = "bit";
+//	char arr2[] = "#############";
+//	strcpy(arr2, arr1);
+//	printf("%s\n", arr2);
+//	return 0;
+//}
+//int A(int x,int y)
+//{
+//	int z = 0;
+//	z = x+y;
+//	return z;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = A(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
